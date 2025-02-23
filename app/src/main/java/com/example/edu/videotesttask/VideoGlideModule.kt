@@ -1,6 +1,5 @@
-package com.example.edu.videotesttask.utils
+package com.example.edu.videotesttask
 
-import VideoFrameDecoder
 import android.content.Context
 import android.graphics.Bitmap
 import com.bumptech.glide.Glide
