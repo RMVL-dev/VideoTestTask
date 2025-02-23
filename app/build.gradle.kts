@@ -21,6 +21,12 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets {
+        named("main") {
+            java.srcDirs("build/generated/ksp")
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -97,4 +103,21 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
 
+    /**
+     *Exoplayer
+     */
+    implementation(libs.exoplayer)
+    implementation(libs.exoplayer.dash)
+    implementation(libs.exoplayer.ui)
+
+    /**
+     * swipe to refresh
+     */
+    implementation(libs.swipe.to.refresh)
+
+    /**
+     * glide
+     */
+    implementation(libs.glide)
+    ksp(libs.glide.ksp)
 }

@@ -3,7 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ListVideosFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.list.ListVideosFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_video_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
+        tools:itemCount="10"
+        tools:listitem="@layout/item_video"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        />
 </FrameLayout>

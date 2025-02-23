@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/listVideosFragment"
-        android:name="com.example.edu.videotesttask.presentation.ListVideosFragment"
+        android:name="com.example.edu.videotesttask.presentation.list.ListVideosFragment"
         android:label="fragment_list_videos"
-        tools:layout="@layout/fragment_list_videos" />
+        tools:layout="@layout/fragment_list_videos" >
+        <action
+            android:id="@+id/action_listVideosFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.edu.videotesttask.presentation.player.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
 </navigation>

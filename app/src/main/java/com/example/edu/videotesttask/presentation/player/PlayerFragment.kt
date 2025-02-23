@@ -1,27 +1,24 @@
-package com.example.edu.videotesttask.presentation
+package com.example.edu.videotesttask.presentation.player
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
-import com.example.edu.videotesttask.databinding.FragmentListVideosBinding
+import com.example.edu.videotesttask.R
+import com.example.edu.videotesttask.databinding.FragmentPlayerBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ListVideosFragment : Fragment() {
-
-    private var _binding: FragmentListVideosBinding? = null
+class PlayerFragment : Fragment() {
+    private var _binding:FragmentPlayerBinding? = null
     private val binding get() = _binding!!
-    private val viewModel by viewModels<ListViewModel>()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentListVideosBinding.inflate(inflater, container, false)
+        _binding = FragmentPlayerBinding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -29,6 +26,4 @@ class ListVideosFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
-
 }

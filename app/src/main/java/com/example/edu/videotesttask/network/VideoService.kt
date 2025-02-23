@@ -11,6 +11,6 @@ interface VideoService {
      * реализация поиска разных видео, поэотому оставим хардкодом id фильма
      */
     @GET("films/5047468/videos")
-    fun getVideos(): Response<VideoResponse>
+    suspend fun getVideos(): Response<VideoResponse>
 
 }

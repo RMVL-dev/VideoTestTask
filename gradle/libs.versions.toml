@@ -1,6 +1,6 @@
 [versions]
 agp = "8.5.2"
-kotlin = "2.0.20"
+kotlin = "2.1.10"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -9,7 +9,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.10.0"
 constraintlayout = "2.2.0"
-ksp ="2.0.20-1.0.25"
+ksp-verison ="2.1.10-1.0.30"
 retrofit = "2.9.0"
 okhttp = "4.12.0"
 hilt = "2.51.1"
@@ -17,6 +17,9 @@ serialization = "1.7.3"
 serialization-converter = "1.0.0"
 serialization-plugin = "2.0.21"
 navigation = "2.8.7"
+swipe = "1.2.0-beta01"
+exoplayer = "1.5.1"
+glide-verision = "4.16.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,11 +45,20 @@ logging-interceptor = {group = "com.squareup.okhttp3", name = "logging-intercept
 navigation-fragment = {group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation"}
 navigation-ui = {group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation"}
 
+swipe-to-refresh = {group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swipe"}
+
+exoplayer = {group = "androidx.media3", name = "media3-exoplayer", version.ref = "exoplayer"}
+exoplayer-dash = {group = "androidx.media3", name = "media3-exoplayer-dash", version.ref = "exoplayer"}
+exoplayer-ui = {group = "androidx.media3", name = "media3-ui", version.ref = "exoplayer"}
+
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide-verision"}
+glide-ksp = {group = "com.github.bumptech.glide", name = "ksp", version.ref = "glide-verision"}
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-verison" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
 serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization-plugin"}
 androidx-navigation-safe-args = { id ="androidx.navigation.safeargs.kotlin",version.ref ="navigation" }
