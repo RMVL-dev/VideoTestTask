@@ -13,7 +13,6 @@ import java.io.InputStream
 class VideoGlideModule: AppGlideModule() {
 
     override fun registerComponents(context: Context, glide: Glide, registry: Registry) {
-        // Регистрация кастомного декодера для видео
         registry.append(
             Registry.BUCKET_BITMAP,
             InputStream::class.java,
