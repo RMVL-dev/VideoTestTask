@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.serialization.plugin)
+    alias(libs.plugins.androidx.navigation.safe.args)
 }
 
 android {
@@ -27,7 +28,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_URL", "\"https://kinopoiskapiunofficial.tech/\"")
+            buildConfigField("String", "BASE_URL", "\"https://kinopoiskapiunofficial.tech/api/v2.2/\"")
             buildConfigField("String", "API_KEY", "\"b137c022-3d39-4f62-8639-e9232837f476\"")
         }
 
@@ -37,7 +38,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField("String", "BASE_URL", "\"https://kinopoiskapiunofficial.tech/\"")
+            buildConfigField("String", "BASE_URL", "\"https://kinopoiskapiunofficial.tech/api/v2.2/\"")
             buildConfigField("String", "API_KEY", "\"b137c022-3d39-4f62-8639-e9232837f476\"")
 
         }
@@ -89,4 +90,11 @@ dependencies {
      */
     implementation(libs.kotlinx.serialization)
     implementation(libs.kotlinx.serialization.converter)
+
+    /**
+     * navigation
+     */
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+
 }
