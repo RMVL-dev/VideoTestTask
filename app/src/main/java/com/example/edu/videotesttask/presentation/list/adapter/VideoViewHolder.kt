@@ -11,12 +11,15 @@ class VideoViewHolder(
     private val context: Context
 ):RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: VideoItem){
+    fun bind(item: VideoItem, navigation:() -> Unit){
         binding.itemName.text = item.name
         GlideApp.with(context)
             .asBitmap()
             .load(item.url)
             .into(binding.itemThumbnail)
+        binding.root.setOnClickListener {
+            navigation()
+        }
     }
 
 }

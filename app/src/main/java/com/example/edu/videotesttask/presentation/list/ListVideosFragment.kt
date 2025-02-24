@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.edu.videotesttask.R
@@ -40,6 +41,11 @@ class ListVideosFragment : Fragment() {
         divider.setDrawable(ContextCompat.getDrawable(requireContext(), R.drawable.divider)!!)
         binding.rvVideoList.adapter = adapter
         binding.rvVideoList.addItemDecoration(divider)
+        adapter.navigate = { url ->
+            findNavController().navigate(
+                ListVideosFragmentDirections.actionListVideosFragmentToPlayerFragment(url)
+            )
+        }
 
         collectFlowWhenStarted(viewModel.videos){ response ->
             when(response){
