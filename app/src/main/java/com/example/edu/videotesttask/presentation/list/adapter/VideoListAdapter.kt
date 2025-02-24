@@ -12,6 +12,7 @@ class VideoListAdapter(
 ):RecyclerView.Adapter<VideoViewHolder>() {
 
     var items:List<VideoItem> = emptyList()
+    var navigate: (String) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder =
         VideoViewHolder(
@@ -25,6 +26,6 @@ class VideoListAdapter(
     override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
-        holder.bind(item = items[position])
+        holder.bind(item = items[position], navigation = {navigate(items[position].url)})
     }
 }

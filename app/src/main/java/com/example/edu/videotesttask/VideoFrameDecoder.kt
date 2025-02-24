@@ -1,3 +1,5 @@
+package com.example.edu.videotesttask
+
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -7,7 +9,6 @@ import com.bumptech.glide.load.engine.Resource
 import com.bumptech.glide.load.resource.SimpleResource
 import android.media.MediaMetadataRetriever
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool
-import com.example.edu.videotesttask.R
 import java.io.File
 import java.io.InputStream
 

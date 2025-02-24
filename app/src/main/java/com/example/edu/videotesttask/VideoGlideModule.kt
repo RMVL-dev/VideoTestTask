@@ -1,6 +1,5 @@
-package com.example.edu.videotesttask.utils
+package com.example.edu.videotesttask
 
-import VideoFrameDecoder
 import android.content.Context
 import android.graphics.Bitmap
 import com.bumptech.glide.Glide
@@ -13,7 +12,6 @@ import java.io.InputStream
 class VideoGlideModule: AppGlideModule() {
 
     override fun registerComponents(context: Context, glide: Glide, registry: Registry) {
-        // Регистрация кастомного декодера для видео
         registry.append(
             Registry.BUCKET_BITMAP,
             InputStream::class.java,
